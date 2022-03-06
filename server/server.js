@@ -18,5 +18,5 @@ app.use('/animal', passport.authenticate('jwt', { session: false }),AnimalRoutes
 app.use('/employee', passport.authenticate('jwt', { session: false }), EmployeeRoutes);
 
 
-app.listen(process.env.PORT)
+app.listen(process.env.PORT || 3009)
 app.get('/',(req,res)=>res.send('zoo server connect'));
