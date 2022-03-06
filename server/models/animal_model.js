@@ -3,7 +3,7 @@ const schema = mongoose.Schema;
 
 const Animal = new schema({
     name: { type: String, required: true },
-    date: { type: Date, required: true },
+    date: { type: String, required: true },
     cageNumber: { type: Number, required: true },
     gender: { type: String, required: true },
     type: { type: String, require: true },
