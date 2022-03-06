@@ -4,6 +4,7 @@ const cors = require('cors');
 const express = require('express');
 const AnimalRoutes = require('./routes/animal-routes');
 const EmployeeRoutes = require('./routes/employees-routes');
+const UserRoutes = require('./routes/user-routes')
 const app = express();
 const passport = require("passport");
 
@@ -18,6 +19,6 @@ app.listen(process.env.PORT)
 
 app.use('/animal', passport.authenticate('jwt', { session: false }),AnimalRoutes);
 app.use('/employee', passport.authenticate('jwt', { session: false }), EmployeeRoutes);
-
+app.use('/Auth',UserRoutes);
 
 app.get('/',(req,res)=>res.send('zoo server connect'));
