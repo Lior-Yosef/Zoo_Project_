@@ -9,8 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-app.listen(process.env.PORT)
-app.get('/',(req,res)=>res.send('zoo server connect'));
 
 app.use('/animal',AnimalRoutes);
 app.use('/employee', EmployeeRoutes);
+
+
+app.listen(process.env.PORT)
+app.get('/',(req,res)=>res.send('zoo server connect'));

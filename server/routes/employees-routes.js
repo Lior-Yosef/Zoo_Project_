@@ -8,4 +8,4 @@ EmployeeController.post("/",AddEmployee);
 EmployeeController.put("/:id",UpdateEmployee);
 EmployeeController.delete("/:id",DeleteEmployee);
 
-module.exports = EmployeeController;
+module.exports = EmployeeRoutes;
