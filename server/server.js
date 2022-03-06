@@ -5,6 +5,7 @@ const express = require('express');
 const AnimalRoutes = require('./routes/animal-routes');
 const EmployeeRoutes = require('./routes/employees-routes');
 const app = express();
+const passport = require("passport");
 
 app.use(cors());
 app.use(express.json())
